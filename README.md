@@ -49,3 +49,7 @@ https://dbadmin.test
 https://api.appmerc.test  
 https://llm.appmerc.test  
 https://n8n.appmerc.test  
+
+Magento
+  Load a Magento instance into site/projects/appmerc/api  
+  You can use the canned db included or generate a new one.  
