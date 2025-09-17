@@ -1,3 +1,6 @@
 [submodule "site/ollama/webui"]
 	path = site/ollama/webui
 	url = https://github.com/open-webui/open-webui/
+[submodule "site/projects/tools/magento-coding-standard"]
+	path = site/projects/tools/magento-coding-standard
+	url = https://github.com/magento/magento-coding-standard.git
