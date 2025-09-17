@@ -28,3 +28,6 @@ Scripts
   bin/dmysql - Allows user to enter MySQL environment  
   bin/dnginx - Allows user to enter Nginx environment  
   bin/dllama - Allows user to enter Ollama LLM environment   
+
+Ollama - https://ollama.com/  
+  Recomended model for 16GB ram - https://ollama.com/library/llama3.2:3b  
