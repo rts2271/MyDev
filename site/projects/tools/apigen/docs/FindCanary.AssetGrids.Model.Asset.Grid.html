@@ -1,0 +1,986 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>Class FindCanary\AssetGrids\Model\Asset\Grid |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Canary.html">Canary</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Canary.AwsCognitoAuth.html">AwsCognitoAuth</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Canary.CloudWatchLogger.html">CloudWatchLogger</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Canary.DirectAddToCart.html">DirectAddToCart</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Canary.Faq.html">Faq</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Canary.GoogleAdminSso.html">GoogleAdminSso</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Canary.OktaAdminSso.html">OktaAdminSso</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Canary.ProductAskedQuestion.html">ProductAskedQuestion</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-FindCanary.html">FindCanary</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-FindCanary.AssetGrids.html">AssetGrids</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.AssetGrids.Api.html">Api</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.AssetGrids.Block.html">Block</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.AssetGrids.Controller.html">Controller</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-FindCanary.AssetGrids.Model.html">Model</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-FindCanary.AssetGrids.Model.Asset.html">Asset</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.AssetGrids.Model.Asset.Grid.html">Grid</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.AssetGrids.Model.Asset.Source.html">Source</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.AssetGrids.Model.ResourceModel.html">ResourceModel</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.AssetGrids.Model.Tag.html">Tag</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.AssetGrids.Plugin.html">Plugin</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.AssetGrids.Service.html">Service</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.AssetGrids.Ui.html">Ui</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.Assets.html">Assets</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.CategoryCustomLayout.html">CategoryCustomLayout</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.CategoryData.html">CategoryData</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.CategoryWidget.html">CategoryWidget</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.ContentImportExport.html">ContentImportExport</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.EventQueue.html">EventQueue</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.LinkedProducts.html">LinkedProducts</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.PageBuilder.html">PageBuilder</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.SetupConfig.html">SetupConfig</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.SetupToolbox.html">SetupToolbox</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.ShippingRules.html">ShippingRules</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.SvgImages.html">SvgImages</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-FindCanary.ThemeData.html">ThemeData</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.html">Tactacam</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.AmastyFreeGiftFixes.html">AmastyFreeGiftFixes</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.AmbassadorApplication.html">AmbassadorApplication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.AttributeCountryWarning.html">AttributeCountryWarning</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.Attributes.html">Attributes</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.BlogUpdates.html">BlogUpdates</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.Catalog.html">Catalog</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.CatalogUpdates.html">CatalogUpdates</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.CopyContent.html">CopyContent</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.CouponUsageNotification.html">CouponUsageNotification</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.CustomAdminOrder.html">CustomAdminOrder</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.CustomerPasswordReset.html">CustomerPasswordReset</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.CustomerServiceApis.html">CustomerServiceApis</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.CustomerTaxExempt.html">CustomerTaxExempt</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.CustomerTier.html">CustomerTier</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.CustomForms.html">CustomForms</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.CustomShippingMethod.html">CustomShippingMethod</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.DealerApplication.html">DealerApplication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.DealerMap.html">DealerMap</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.DealerWarrantyForm.html">DealerWarrantyForm</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.ExcludeCouponSku.html">ExcludeCouponSku</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.ExternalLinkConfig.html">ExternalLinkConfig</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.FeathersnapAuth.html">FeathersnapAuth</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.FundraisingForm.html">FundraisingForm</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.GiftCard.html">GiftCard</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.GoogleDrive.html">GoogleDrive</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.GooglePlaces.html">GooglePlaces</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.GoogleSheets.html">GoogleSheets</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.GroupedProducts.html">GroupedProducts</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.GTMEnvironmentSupport.html">GTMEnvironmentSupport</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.HeaderNavigation.html">HeaderNavigation</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.KlaviyoForm.html">KlaviyoForm</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.LimitSalesPerDay.html">LimitSalesPerDay</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.LimitShippingCountry.html">LimitShippingCountry</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.MarketingPixel.html">MarketingPixel</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.OutfitterApplication.html">OutfitterApplication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.PartialShipment.html">PartialShipment</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.PartnershipApplication.html">PartnershipApplication</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.PendingOrders.html">PendingOrders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.PreloadAssets.html">PreloadAssets</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.QuickCompare.html">QuickCompare</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.RestrictPoBoxes.html">RestrictPoBoxes</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.Search.html">Search</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.SecondBlogUpdates.html">SecondBlogUpdates</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.ShareCustomers.html">ShareCustomers</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.ShippingOrigin.html">ShippingOrigin</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.StripeConfig.html">StripeConfig</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.SurpriseDelight.html">SurpriseDelight</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-Tactacam.VideosPage.html">VideosPage</a>
+			</li>
+	</ul>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li class="active">
+						<a href="FindCanary.AssetGrids.Model.Asset.Grid.html">
+							Grid
+						</a>
+					</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-FindCanary.AssetGrids.Model.Asset.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="FindCanary.AssetGrids.Model.Asset.Grid.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-FindCanary.html">FindCanary</a>\<a href="namespace-FindCanary.AssetGrids.html">AssetGrids</a>\<a href="namespace-FindCanary.AssetGrids.Model.html">Model</a>\<a href="namespace-FindCanary.AssetGrids.Model.Asset.html">Asset</a>\<a href="FindCanary.AssetGrids.Model.Asset.Grid.html">Grid</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+		<tr>
+			<th><code>extends</code></th>
+			<td>
+<code><span title="Magento\Framework\Model\AbstractModel">AbstractModel</span></code>			</td>
+		</tr>
+		<tr>
+			<th><code>implements</code></th>
+			<td>
+<code><a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html"><span title="FindCanary\AssetGrids\Api\Data\Asset\GridInterface">GridInterface</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<span>Magento\Framework\Model\AbstractModel</span>
+
+
+	<ul class="classTree">
+	<li>
+<b><span class="active">FindCanary\AssetGrids\Model\Asset\Grid</span></b>
+
+		implements
+			<a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html"><span title="FindCanary\AssetGrids\Api\Data\Asset\GridInterface">GridInterface</span></a>
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#13" title="Go to source code">FindCanary/AssetGrids/Model/Asset/Grid.php</a><br>
+		</div>
+
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="_construct" id="__construct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#30-37" title="Go to source code">_construct</a>(): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#__construct">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getGridId" id="_getGridId">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#39-46" title="Go to source code">getGridId</a>(): int|null</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getGridId">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setGridId" id="_setGridId">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#48-55" title="Go to source code">setGridId</a>(<span>int <var>$gridId</var></span>): <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html"><span title="FindCanary\AssetGrids\Api\Data\Asset\GridInterface">GridInterface</span></a></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setGridId">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getName" id="_getName">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#57-63" title="Go to source code">getName</a>(): string|null</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getName">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setName" id="_setName">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#65-72" title="Go to source code">setName</a>(<span>string <var>$name</var></span>): <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html"><span title="FindCanary\AssetGrids\Api\Data\Asset\GridInterface">GridInterface</span></a></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setName">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getDescription" id="_getDescription">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#74-80" title="Go to source code">getDescription</a>(): string|null</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getDescription">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setDescription" id="_setDescription">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#82-89" title="Go to source code">setDescription</a>(<span>string <var>$description</var></span>): <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html"><span title="FindCanary\AssetGrids\Api\Data\Asset\GridInterface">GridInterface</span></a></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setDescription">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getSearchFields" id="_getSearchFields">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#91-97" title="Go to source code">getSearchFields</a>(): array</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getSearchFields">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setSearchFields" id="_setSearchFields">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#99-106" title="Go to source code">setSearchFields</a>(<span>array <var>$searchFields</var></span>): <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html"><span title="FindCanary\AssetGrids\Api\Data\Asset\GridInterface">GridInterface</span></a></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setSearchFields">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getSearchHint" id="_getSearchHint">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#108-114" title="Go to source code">getSearchHint</a>(): string|null</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getSearchHint">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setSearchHint" id="_setSearchHint">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#116-123" title="Go to source code">setSearchHint</a>(<span>string <var>$searchHint</var></span>): <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html"><span title="FindCanary\AssetGrids\Api\Data\Asset\GridInterface">GridInterface</span></a></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setSearchHint">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getColumns" id="_getColumns">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#125-131" title="Go to source code">getColumns</a>(): array</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getColumns">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setColumns" id="_setColumns">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#133-140" title="Go to source code">setColumns</a>(<span>array <var>$columns</var></span>): <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html"><span title="FindCanary\AssetGrids\Api\Data\Asset\GridInterface">GridInterface</span></a></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setColumns">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getAssetTypes" id="_getAssetTypes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#142-148" title="Go to source code">getAssetTypes</a>(): string[]</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getAssetTypes">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setAssetTypes" id="_setAssetTypes">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#150-157" title="Go to source code">setAssetTypes</a>(<span>string[] <var>$assetTypes</var></span>): <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html"><span title="FindCanary\AssetGrids\Api\Data\Asset\GridInterface">GridInterface</span></a></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setAssetTypes">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getTagIds" id="_getTagIds">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#159-165" title="Go to source code">getTagIds</a>(): int[]</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getTagIds">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setTagIds" id="_setTagIds">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#167-174" title="Go to source code">setTagIds</a>(<span>int[] <var>$tagIds</var></span>): <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html"><span title="FindCanary\AssetGrids\Api\Data\Asset\GridInterface">GridInterface</span></a></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setTagIds">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getIsActive" id="_getIsActive">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#176-182" title="Go to source code">getIsActive</a>(): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getIsActive">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="setIsActive" id="_setIsActive">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#184-191" title="Go to source code">setIsActive</a>(<span>bool <var>$isActive</var></span>): $this</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_setIsActive">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Constants inherited from <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html"><span>FindCanary\AssetGrids\Api\Data\Asset\GridInterface</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#GRID_ID"><code>GRID_ID</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#NAME"><code>NAME</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#DESCRIPTION"><code>DESCRIPTION</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#SEARCH_FIELDS"><code>SEARCH_FIELDS</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#SEARCH_HINT"><code>SEARCH_HINT</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#COLUMNS"><code>COLUMNS</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#ASSET_TYPES"><code>ASSET_TYPES</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#TAG_IDS"><code>TAG_IDS</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#IS_ACTIVE"><code>IS_ACTIVE</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#STATUS_ENABLED"><code>STATUS_ENABLED</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#STATUS_DISABLED"><code>STATUS_DISABLED</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#SEARCH_TYPE_INPUT"><code>SEARCH_TYPE_INPUT</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#SEARCH_TYPE_SELECT"><code>SEARCH_TYPE_SELECT</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#SEARCH_FIELD_CATEGORY_NAME"><code>SEARCH_FIELD_CATEGORY_NAME</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#SEARCH_FIELD_PRODUCT_SKU"><code>SEARCH_FIELD_PRODUCT_SKU</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#SEARCH_FIELD_PRODUCT_NAME"><code>SEARCH_FIELD_PRODUCT_NAME</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#SEARCH_FIELD_ASSET_NAME"><code>SEARCH_FIELD_ASSET_NAME</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#SEARCH_FIELD_ASSET_DESCRIPTION"><code>SEARCH_FIELD_ASSET_DESCRIPTION</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#COLUMN_PRODUCT_NAME"><code>COLUMN_PRODUCT_NAME</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#COLUMN_PRODUCT_SKU"><code>COLUMN_PRODUCT_SKU</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#COLUMN_CATEGORY_NAME"><code>COLUMN_CATEGORY_NAME</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#COLUMN_ASSET_NAME"><code>COLUMN_ASSET_NAME</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#COLUMN_ASSET_DESCRIPTION"><code>COLUMN_ASSET_DESCRIPTION</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#COLUMN_TAG"><code>COLUMN_TAG</code></a>, <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#COLUMN_ACTION"><code>COLUMN_ACTION</code></a></code>				</td>
+			</tr>
+		</table>
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="_idFieldName" id="$_idFieldName">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#15-18" title="Go to source code">$_idFieldName</a></var> = <a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html"><span title="FindCanary\AssetGrids\Api\Data\Asset\GridInterface">GridInterface</span></a>::<a href="FindCanary.AssetGrids.Api.Data.Asset.GridInterface.html#GRID_ID">GRID_ID</a></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_idFieldName">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_eventPrefix" id="$_eventPrefix">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#20-23" title="Go to source code">$_eventPrefix</a></var> = <span class="php-str">'findcanary_asset_grid'</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_eventPrefix">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="_eventObject" id="$_eventObject">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	protected
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-FindCanary.AssetGrids.Model.Asset.Grid.html#25-28" title="Go to source code">$_eventObject</a></var> = <span class="php-str">'asset_grid'</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$_eventObject">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen 1.0.0+no-version-set</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>
