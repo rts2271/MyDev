@@ -1,4 +1,4 @@
-Dependencies
+Dependencies  
   Brew  
   Mkcert  
   Sudo access  
