@@ -1,0 +1,5 @@
+#!/bin/bash
+export USER=`whoami`
+export USERID=`id -u $USER`
+export GROUP=`id -gn`
+docker exec -it --user $USER mydev_nginx bash $@

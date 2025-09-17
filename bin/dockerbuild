@@ -1,0 +1,17 @@
+#!/bin/bash
+. .env
+bash init.v2.bash;
+# Reset permissions
+echo 'Reinstating permissions'
+# docker exec -u root -it mydev_phpfpm82 chown -R $USER:$USER /var/www/html/
+# Process Rabbit connections
+sleep 10
+for DOMAINVALUE in ${STACKDOMAINS[@]}; 
+do
+    echo "Generating Rabbit connection configuration for "$DOMAINVALUE
+	echo `docker exec -it mydev_rabbitmq rabbitmqctl add_user $DOMAINVALUE q1w2e3r4`;
+    echo `docker exec -it mydev_rabbitmq rabbitmqctl add_vhost $DOMAINVALUE`;
+    echo `docker exec -it mydev_rabbitmq rabbitmqctl set_permissions -p $DOMAINVALUE $DOMAINVALUE '.*' '.*' '.*'`;
+done
+
+echo "Built from docker"

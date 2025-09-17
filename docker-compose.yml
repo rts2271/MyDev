@@ -1,0 +1,271 @@
+networks:
+    mydev_network:
+        driver: bridge
+        ipam:
+          driver: default
+          config:
+            - subnet: 172.18.1.0/24
+              gateway: 172.18.1.1
+              
+services:
+    mydev_nginx:
+        container_name: mydev_nginx
+        build: ./builds/nginx
+        ports:
+           - '80:80'
+           - '443:443'
+           - '3000:3000'
+           - '3001:3001'
+           - '3002:3002'
+           - '9229:9229'          
+        depends_on:
+          - mydev_phpfpm82
+          - mydev_phpfpm83           
+        volumes:
+           - ./site:/var/www/html
+           - ./site/confs:/etc/nginx/conf.d    
+           - ./site/ssl:/etc/nginx/ssl           
+        env_file: .env
+        networks:
+           mydev_network:
+              ipv4_address: 172.18.1.10
+        extra_hosts:
+          - "api.appmerc.test:172.18.1.10"
+          - "www.appmerc.test:172.18.1.10" 
+          - "n8n.appmerc.test:172.18.1.10"    
+          
+    mydev_mysql:
+        container_name: mydev_mysql
+        build: ./builds/mariadb
+        ports:
+           - '3306:3306'
+        volumes:
+           - ./site/dbdata:/var/lib/mysql
+           - ./site/data:/docker-entrypoint-initdb.d           
+        env_file: .env
+        networks:
+           mydev_network:
+              ipv4_address: 172.18.1.11
+               
+    mydev_phpfpm82:
+        container_name: mydev_phpfpm82
+        build: builds/phpfpm82  
+        expose:     
+           - 9000
+           - 9001              
+        volumes:
+           - ./site:/var/www/html
+        env_file: .env
+        networks:
+           mydev_network:
+              ipv4_address: 172.18.1.14
+         
+    mydev_phpfpm83:
+        container_name: mydev_phpfpm83
+        build: builds/phpfpm83  
+        expose:     
+           - 9000
+           - 9001              
+        volumes:
+           - ./site:/var/www/html
+        env_file: .env
+        networks:
+           mydev_network:
+              ipv4_address: 172.18.1.19         
+         
+    mydev_redis:
+        container_name: mydev_redis
+        build: ./builds/redis
+        expose:
+           - 6379
+        networks:
+           mydev_network:
+              ipv4_address: 172.18.1.15                      
+
+    mydev_rabbitmq:
+        container_name: mydev_rabbitmq
+        build: ./builds/rabbitmq
+        expose:
+           - 5672
+           - 15672
+        networks:
+           mydev_network:
+              ipv4_address: 172.18.1.17           
+
+    mydev_dbadmin:
+        container_name: mydev_dbadmin    
+        build: ./builds/dbadmin
+        env_file: .env     
+        expose:
+          - 80
+        depends_on:
+          - mydev_mysql
+        environment:
+          PMA_HOST : mydev_mysql
+          MYSQL_USERNAME: root
+          MYSQL_ROOT_PASSWORD: q1w2e3r4          
+        networks:
+           mydev_network:
+              ipv4_address: 172.18.1.18
+        
+    mydev_ollama_webui:
+        container_name: mydev_ollama_webui
+        image: ghcr.io/open-webui/open-webui:main
+        expose:
+          - "8080:8080"         
+        environment:
+          - 'OLLAMA_BASE_URL=http://172.18.1.26:11434'      
+        volumes:
+          - ./site/ollama/webui:/app/backend/data
+        networks:
+           mydev_network:
+              ipv4_address: 172.18.1.25
+          
+    mydev_ollama:
+        container_name: mydev_ollama
+        image: ollama/ollama
+        deploy:
+          resources:
+            reservations:
+              devices:
+              - driver: nvidia
+                capabilities: [gpu]
+                count: all 
+        ports:
+          - "11434:11434"  
+        environment:
+          - 'gpus=all'            
+        volumes:
+          - ./site/ollama/llms:/root/.ollama
+        networks:
+           mydev_network:
+              ipv4_address: 172.18.1.26          
+              
+    mydev_ollama_pipelines:
+        container_name: mydev_ollama_pipelines
+        image: ghcr.io/open-webui/pipelines:main  
+        volumes:
+          - ./site/ollama/pipelines:/root/.ollama        
+        expose:
+          - "9099:9099"          
+        networks:
+           mydev_network:
+              ipv4_address: 172.18.1.27
+          
+    mydev_mailcatcher:
+      container_name: mydev_mailcatcher
+      image: dockage/mailcatcher
+      ports:
+        - "1080:1080"
+        - "1025:1025"
+      networks:
+        mydev_network:
+          ipv4_address: 172.18.1.31
+          
+    mydev_n8n:
+        container_name: mydev_n8n
+        image: n8nio/n8n:latest  
+        volumes:
+          - ./site/n8n_data:/home/node/.n8n  
+        extra_hosts:
+          - "api.appmerc.test:172.18.1.10"          
+        ports:
+          - "5678:5678"   
+        environment:
+          N8N_SECURE_COOKIE : false
+          N8N_RUNNERS_ENABLED : true
+          GENERIC_TIMEZONE : America/New_York
+          TZ : America/New_York
+          NODE_TLS_REJECT_UNAUTHORIZED : 0          
+        networks:
+           mydev_network:
+              ipv4_address: 172.18.1.32    
+
+    mydev_elasticsearch7:
+        container_name: mydev_elasticsearch7
+        build: ./builds/elastisearch7
+        env_file: .env
+        ulimits:
+            memlock:
+                soft: -1
+                hard: -1
+        volumes:
+           - ./site:/var/www/html
+        expose:
+           - 9200
+        networks:
+           mydev_network:
+              ipv4_address: 172.18.1.16              
+          
+    mydev_elasticsearch8:
+        container_name: mydev_elasticsearch8
+        build: ./builds/elastisearch8
+        env_file: .env
+        ulimits:
+            memlock:
+                soft: -1
+                hard: -1
+        volumes:
+           - ./site:/var/www/html
+        expose:
+           - 9200
+        networks:
+           mydev_network:
+              ipv4_address: 172.18.1.33        
+ 
+          
+    mydev_cypress_included:
+        container_name: mydev_cypress_included
+        image: cypress/included
+        volumes:
+           - ./site/projects/appmerc/api:/app
+        networks:
+           mydev_network:
+              ipv4_address: 172.18.1.37
+
+    mydev_phpfpm84:
+      container_name: mydev_phpfpm84
+      build: builds/phpfpm84
+      expose:
+        - 9000
+        - 9001
+      volumes:
+        - ./site:/var/www/html
+      env_file: .env
+      networks:
+        mydev_network:
+          ipv4_address: 172.18.1.38
+
+    mydev_postgres:
+      container_name: mydev_postgres
+      image: postgres:latest
+      expose:
+        - 5432
+      volumes:
+        - ./site/pdbdata:/var/lib/postgresql/data
+      env_file: .env
+      networks:
+        mydev_network:
+          ipv4_address: 172.18.1.39
+
+    mydev_pgvector:
+      container_name: mydev_pgvector
+      image: pgvector/pgvector:pg17-trixie
+      expose:
+        - 5432
+      volumes:
+        - ./site/vectordata:/var/lib/postgresql/data
+      env_file: .env
+      networks:
+        mydev_network:
+          ipv4_address: 172.18.1.40
+          
+    mydev_memcached:
+      container_name: mydev_memcached
+      image: memcached:trixie
+      expose:
+        - 11211
+      networks:
+        mydev_network:
+          ipv4_address: 172.18.1.41          
+          
