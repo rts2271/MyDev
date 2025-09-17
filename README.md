@@ -1,8 +1,8 @@
 Dependencies
-  Brew
-  Mkcert
-  Sudo access
-  Docker desktop
+  Brew  
+  Mkcert  
+  Sudo access  
+  Docker desktop  
 
 Configuration
   In the root folder is a .env file. For the initial setup, update the DOCKERUSER, DOCKERGROUP and DOCKERUSERID to match your local account.
