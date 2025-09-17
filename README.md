@@ -12,7 +12,8 @@ Configuration
     mkcert api.appmerc.test  
     mkcert llm.appmerc.test  
     mkcert n8n.appmerc.test  
-  The build will create the structure SUBDOMAIN.STACKDOMAIN.test 
+  The build will create the structure SUBDOMAIN.STACKDOMAIN.test  
+    
   Using the above domains in the example hosts file entry  
     127.0.0.1 api.appmerc.test  
     127.0.0.1 llm.appmerc.test  
