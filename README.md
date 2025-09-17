@@ -39,3 +39,13 @@ Scripts
 
 Ollama - https://ollama.com/  
   Recomended model for 16GB ram - https://ollama.com/library/llama3.2:3b  
+  Pull a Ollama model  
+    Enter in to the Ollama container by issuing the command bin/dllama  
+    Pull the desired model - ollama pull llama3.2:3b
+    Exit the ollama container with exit  
+    The model is now available to you. 
+
+https://dbadmin.test  
+https://api.appmerc.test  
+https://llm.appmerc.test  
+https://n8n.appmerc.test  
