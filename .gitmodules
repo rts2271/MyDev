@@ -1,0 +1,3 @@
+[submodule "site/ollama/webui"]
+	path = site/ollama/webui
+	url = https://github.com/open-webui/open-webui/
