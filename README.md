@@ -22,6 +22,7 @@ Configuration
     127.0.0.1 dbadmin.test  
 
   Set your local environment path for Docker and the bin folder  
+  EXAMPLE  
   export PATH=$PATH:~/LlamaDocker  
   export PATH=$PATH:~/LlamaDocker/bin  
   Exit and reload your terminal  
