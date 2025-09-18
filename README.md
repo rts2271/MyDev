@@ -6,25 +6,22 @@ Dependencies
 
 Configuration  
   In the root folder is a .env configuration file. For the initial setup, update the DOCKERUSER, DOCKERGROUP and DOCKERUSERID to match your local account.  
-  Navigate to the SSL folder. cd site/ssl and generate the following SSL files.  
-  For this example we are using the STACKDOMAIN appmerc set up in the .env file. We have chosen this for this example. 
-  Example:  
-    mkcert dbadmin.test  
-    mkcert api.appmerc.test  
-    mkcert llm.appmerc.test  
-    mkcert n8n.appmerc.test  
+  If building a local dev environment
+    Navigate to the SSL folder. cd site/ssl and generate the following SSL files.  
+    For this example we are using the STACKDOMAIN appmerc set up in the .env file. We have chosen this for this example. 
+      Example:   
+        mkcert api.appmerc.test  
   The build will create the structure SUBDOMAIN.STACKDOMAIN.test  
     
   Using the above domains in the example hosts file entry  
     127.0.0.1 api.appmerc.test  
-    127.0.0.1 llm.appmerc.test  
-    127.0.0.1 n8n.appmerc.test  
+    127.0.0.1 llm.test  
+    127.0.0.1 n8n.test  
     127.0.0.1 dbadmin.test  
 
   Set your local environment path for Docker and the bin folder  
-  EXAMPLE  
-  export PATH=$PATH:~/LlamaDocker  
-  export PATH=$PATH:~/LlamaDocker/bin  
+  EXAMPLE   
+  export PATH=$PATH:~/MyDev/bin  
   Exit and reload your terminal  
 Build  
   In the root folder run bin/dockerbuild  
@@ -46,11 +43,11 @@ Ollama - https://ollama.com/
     Exit the ollama container with exit  
     The model is now available to you. 
 
-https://dbadmin.test  
+ 
 https://api.appmerc.test  
-https://llm.appmerc.test  
-https://n8n.appmerc.test  
-
+https://llm.test  
+https://n8n.test  
+https://dbadmin.test 
+  
 Magento
   Load a Magento instance into site/projects/appmerc/api  
-  You can use the canned db included or generate a new one.  
