@@ -1,4 +1,5 @@
 .idea
+.env
 site/ssl
 site/dbdata
 site/n8n_data
