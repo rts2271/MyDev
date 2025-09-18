@@ -4,8 +4,8 @@ networks:
         ipam:
           driver: default
           config:
-            - subnet: 172.18.1.0/24
-              gateway: 172.18.1.1
+            - subnet: 172.18.16.0/24
+              gateway: 172.18.16.1
               
 services:
     mydev_nginx:
@@ -28,11 +28,11 @@ services:
         env_file: .env
         networks:
            mydev_network:
-              ipv4_address: 172.18.1.10
+              ipv4_address: 172.18.16.10
         extra_hosts:
-          - "api.appmerc.test:172.18.1.10"
-          - "www.appmerc.test:172.18.1.10" 
-          - "n8n.appmerc.test:172.18.1.10"    
+          - "api.appmerc.test:172.18.16.10"
+          - "www.appmerc.test:172.18.16.10" 
+          - "n8n.appmerc.test:172.18.16.10"    
           
     mydev_mysql:
         container_name: mydev_mysql
@@ -45,7 +45,7 @@ services:
         env_file: .env
         networks:
            mydev_network:
-              ipv4_address: 172.18.1.11
+              ipv4_address: 172.18.16.11
                
     mydev_phpfpm82:
         container_name: mydev_phpfpm82
@@ -58,7 +58,7 @@ services:
         env_file: .env
         networks:
            mydev_network:
-              ipv4_address: 172.18.1.14
+              ipv4_address: 172.18.16.14
          
     mydev_phpfpm83:
         container_name: mydev_phpfpm83
@@ -71,7 +71,7 @@ services:
         env_file: .env
         networks:
            mydev_network:
-              ipv4_address: 172.18.1.19         
+              ipv4_address: 172.18.16.19         
          
     mydev_redis:
         container_name: mydev_redis
@@ -80,7 +80,7 @@ services:
            - 6379
         networks:
            mydev_network:
-              ipv4_address: 172.18.1.15                      
+              ipv4_address: 172.18.16.15                      
 
     mydev_rabbitmq:
         container_name: mydev_rabbitmq
@@ -90,7 +90,7 @@ services:
            - 15672
         networks:
            mydev_network:
-              ipv4_address: 172.18.1.17           
+              ipv4_address: 172.18.16.17           
 
     mydev_dbadmin:
         container_name: mydev_dbadmin    
@@ -106,7 +106,7 @@ services:
           MYSQL_ROOT_PASSWORD: q1w2e3r4          
         networks:
            mydev_network:
-              ipv4_address: 172.18.1.18
+              ipv4_address: 172.18.16.18
         
     mydev_ollama_webui:
         container_name: mydev_ollama_webui
@@ -114,12 +114,12 @@ services:
         expose:
           - "8080:8080"         
         environment:
-          - 'OLLAMA_BASE_URL=http://172.18.1.26:11434'      
+          - 'OLLAMA_BASE_URL=http://172.18.16.26:11434'      
         volumes:
           - ./site/ollama/webui:/app/backend/data
         networks:
            mydev_network:
-              ipv4_address: 172.18.1.25
+              ipv4_address: 172.18.16.25
           
     mydev_ollama:
         container_name: mydev_ollama
@@ -139,7 +139,7 @@ services:
           - ./site/ollama/llms:/root/.ollama
         networks:
            mydev_network:
-              ipv4_address: 172.18.1.26          
+              ipv4_address: 172.18.16.26          
               
     mydev_ollama_pipelines:
         container_name: mydev_ollama_pipelines
@@ -150,7 +150,7 @@ services:
           - "9099:9099"          
         networks:
            mydev_network:
-              ipv4_address: 172.18.1.27
+              ipv4_address: 172.18.16.27
           
     mydev_mailcatcher:
       container_name: mydev_mailcatcher
@@ -160,7 +160,7 @@ services:
         - "1025:1025"
       networks:
         mydev_network:
-          ipv4_address: 172.18.1.31
+          ipv4_address: 172.18.16.31
           
     mydev_n8n:
         container_name: mydev_n8n
@@ -168,7 +168,7 @@ services:
         volumes:
           - ./site/n8n_data:/home/node/.n8n  
         extra_hosts:
-          - "api.appmerc.test:172.18.1.10"          
+          - "api.appmerc.test:172.18.16.10"          
         ports:
           - "5678:5678"   
         environment:
@@ -179,7 +179,7 @@ services:
           NODE_TLS_REJECT_UNAUTHORIZED : 0          
         networks:
            mydev_network:
-              ipv4_address: 172.18.1.32    
+              ipv4_address: 172.18.16.32    
 
     mydev_elasticsearch7:
         container_name: mydev_elasticsearch7
@@ -195,7 +195,7 @@ services:
            - 9200
         networks:
            mydev_network:
-              ipv4_address: 172.18.1.16              
+              ipv4_address: 172.18.16.16              
           
     mydev_elasticsearch8:
         container_name: mydev_elasticsearch8
@@ -211,7 +211,7 @@ services:
            - 9200
         networks:
            mydev_network:
-              ipv4_address: 172.18.1.33        
+              ipv4_address: 172.18.16.33        
  
           
     mydev_cypress_included:
@@ -221,7 +221,7 @@ services:
            - ./site/projects/appmerc/api:/app
         networks:
            mydev_network:
-              ipv4_address: 172.18.1.37
+              ipv4_address: 172.18.16.37
 
     mydev_phpfpm84:
       container_name: mydev_phpfpm84
@@ -234,7 +234,7 @@ services:
       env_file: .env
       networks:
         mydev_network:
-          ipv4_address: 172.18.1.38
+          ipv4_address: 172.18.16.38
 
     mydev_postgres:
       container_name: mydev_postgres
@@ -246,7 +246,7 @@ services:
       env_file: .env
       networks:
         mydev_network:
-          ipv4_address: 172.18.1.39
+          ipv4_address: 172.18.16.39
 
     mydev_pgvector:
       container_name: mydev_pgvector
@@ -258,7 +258,7 @@ services:
       env_file: .env
       networks:
         mydev_network:
-          ipv4_address: 172.18.1.40
+          ipv4_address: 172.18.16.40
           
     mydev_memcached:
       container_name: mydev_memcached
@@ -267,5 +267,5 @@ services:
         - 11211
       networks:
         mydev_network:
-          ipv4_address: 172.18.1.41          
+          ipv4_address: 172.18.16.41          
           
