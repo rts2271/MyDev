@@ -30,9 +30,8 @@ services:
            mydev_network:
               ipv4_address: 172.18.16.10
         extra_hosts:
-          - "api.appmerc.test:172.18.16.10"
-          - "www.appmerc.test:172.18.16.10" 
-          - "n8n.appmerc.test:172.18.16.10"    
+          - "llm.test:172.18.16.10" 
+          - "n8n.test:172.18.16.10"    
           
     mydev_mysql:
         container_name: mydev_mysql

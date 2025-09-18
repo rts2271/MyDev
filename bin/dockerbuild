@@ -1,6 +1,16 @@
 #!/bin/bash
 . .env
-
+echo 'Validating folders'
+if [ ! -d "site/dbdata" ]; then
+mkdir -p site/dbdata;
+fi
+if [ ! -d "site/ssl" ]; then
+mkdir -p site/ssl;
+fi
+if [ ! -d "site/n8n_data" ]; then
+mkdir -p site/n8n_data;
+fi
+echo 'Folder validation complete'
 echo 'Generating SSL'
 cd site/ssl;
 rm *.pem;
@@ -10,16 +20,8 @@ mkcert n8n.test;
 echo 'Generating SSL Complete'
 echo 'Building containers'	
 bash init.v2.bash;
-if [ ! -d "site/dbdata" ]; then
-mkdir -p site/dbdata;
-fi
-if [ ! -d "site/ssl" ]; then
-mkdir -p site/ssl;
-fi
-if [ ! -d "site/n8n_data" ]; then
-mkdir -p site/ssl;
-fi
-sleep(30)
+
+sleep 30
 for DOMAINVALUE in ${STACKDOMAINS[@]}; 
 
 do
