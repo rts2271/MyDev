@@ -10,7 +10,15 @@ mkcert n8n.test;
 echo 'Generating SSL Complete'
 echo 'Building containers'	
 bash init.v2.bash;
-# Reset permissions
+if [ ! -d "site/dbdata" ]; then
+mkdir -p site/dbdata;
+fi
+if [ ! -d "site/ssl" ]; then
+mkdir -p site/ssl;
+fi
+if [ ! -d "site/n8n_data" ]; then
+mkdir -p site/ssl;
+fi
 sleep(30)
 for DOMAINVALUE in ${STACKDOMAINS[@]}; 
 
