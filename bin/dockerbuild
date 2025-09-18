@@ -1,12 +1,19 @@
 #!/bin/bash
 . .env
+
+echo 'Generating SSL'
+cd site/ssl;
+rm *.pem;
+mkcert dbadmin.test;
+mkcert llm.test;
+mkcert n8n.test;
+echo 'Generating SSL Complete'
+echo 'Building containers'	
 bash init.v2.bash;
 # Reset permissions
-echo 'Reinstating permissions'
-# docker exec -u root -it mydev_phpfpm82 chown -R $USER:$USER /var/www/html/
-# Process Rabbit connections
-sleep 10
+sleep(30)
 for DOMAINVALUE in ${STACKDOMAINS[@]}; 
+
 do
     echo "Generating Rabbit connection configuration for "$DOMAINVALUE
 	echo `docker exec -it mydev_rabbitmq rabbitmqctl add_user $DOMAINVALUE q1w2e3r4`;
