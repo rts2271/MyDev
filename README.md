@@ -5,9 +5,9 @@ Dependencies
   Docker desktop  
 
 Configuration  
-  In the root folder is a .env file. For the initial setup, update the DOCKERUSER, DOCKERGROUP and DOCKERUSERID to match your local account.  
-  Navigate to the SSL folder. cs site/ssl and generate the following SSL files.  
-  For this example we are using the STACKDOMAIN appmerc set up in the .env file.  
+  In the root folder is a .env configuration file. For the initial setup, update the DOCKERUSER, DOCKERGROUP and DOCKERUSERID to match your local account.  
+  Navigate to the SSL folder. cd site/ssl and generate the following SSL files.  
+  For this example we are using the STACKDOMAIN appmerc set up in the .env file. We have chosen this for this example. 
   Example:  
     mkcert dbadmin.test  
     mkcert api.appmerc.test  
